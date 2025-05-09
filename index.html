@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft 101</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1e293b" />
+  <title>Minecraft 101</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Velkommen til Minecraft 101</h1>
-    </header>
-    <main>
-        <p>Oppdag guider, kreative prosjekter, og tips for Minecraft.</p>
-        <a href="guides.html">Utforsk Guider</a>
-    </main>
-    <footer>
-        <p>&copy; 2025 Minecraft 101</p>
-    </footer>
+  <header>Minecraft 101</header>
+  <nav>
+    <button onclick="switchTab('all')" class="active">Alle</button>
+    <button onclick="switchTab('Redstone')">Redstone</button>
+    <button onclick="switchTab('Farming')">Farming</button>
+    <button onclick="switchTab('Exploration')">Exploration</button>
+    <button onclick="switchTab('Commands')">Commands</button>
+    <button onclick="switchTab('Projects')">Prosjekter</button>
+    <button onclick="switchTab('Creative')">Kreativt</button>
+  </nav>
+
+  <input class="search" type="text" id="searchBox" placeholder="Søk i guider..." oninput="filterGuides()" />
+  <div id="guideList"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
